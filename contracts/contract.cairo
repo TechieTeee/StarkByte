@@ -24,7 +24,6 @@ func updateTemperature(sensorData: uint256) {
   UserPreferences userPrefs = userPreferences[user];
 
   // Verify ZKP proof of correct sensor data origin and validity
-  // (Replace with actual ZKP implementation)
   assert(verifyProof(sensorData));
 
   if (sensorData >= userPrefs.targetTemperature - userPrefs.tolerance && sensorData <= userPrefs.targetTemperature + userPrefs.tolerance) {
@@ -39,6 +38,5 @@ func updateTemperature(sensorData: uint256) {
 
 // Example ZKP verification function (placeholder)
 func verifyProof(sensorData: uint256): bool {
-  // Replace with actual ZKP verification logic
   return true;
 }
