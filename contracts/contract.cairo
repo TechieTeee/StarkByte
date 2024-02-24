@@ -1,42 +1,67 @@
-// Declare this file as a StarkNet contract.
 %lang starknet
 
-from starkware.cairo.common.cairo_builtins import HashBuiltin
+// Define a dynamic data structure to store user preferences for wearables
+struct WearableData {
+  uint256[] values;
+  uint256[] tolerances;
+}
 
-// Define a data structure to store user preferences
-struct UserPreferences {
+// Define a dynamic data structure to store user baselines
+struct UserBaseline {
   address owner;
-  uint256 targetTemperature;
-  uint256 tolerance;
+  WearableData wearableData;
 }
 
 // Contract storage
-map(address => UserPreferences) userPreferences;
+map(address => UserBaseline) userBaselines;
 
-// Function to set user preferences
-func setUserPreferences(targetTemperature: uint256, tolerance: uint256) {
-  userPreferences[msg.sender] = UserPreferences(owner: msg.sender, targetTemperature: targetTemperature, tolerance: tolerance);
+// Function to set user baselines
+func setUserBaselines(targetValues: uint256[], tolerances: uint256[]) {
+  require_eq(targetValues.length, tolerances.length, "Lengths of targetValues and tolerances must match.");
+  userBaselines[msg.sender] = UserBaseline(owner: msg.sender, wearableData: WearableData(values: targetValues, tolerances: tolerances));
 }
 
-// Function to update temperature based on sensor data
-func updateTemperature(sensorData: uint256) {
+// Function to update wearable data and trigger alerts
+func updateWearableData(wearableData: uint256[]) {
   address user = msg.sender;
-  UserPreferences userPrefs = userPreferences[user];
+  UserBaseline userBaseline = userBaselines[user];
 
-  // Verify ZKP proof of correct sensor data origin and validity
-  assert(verifyProof(sensorData));
+  // Verify ZKP proof of correct wearable data origin and validity
+  assert(verifyProof(wearableData));
 
-  if (sensorData >= userPrefs.targetTemperature - userPrefs.tolerance && sensorData <= userPrefs.targetTemperature + userPrefs.tolerance) {
-    // Temperature within preferred range, no action needed
-    return;
+  // Check for anomalies in wearable data
+  if (isAnomalous(wearableData, userBaseline.wearableData)) {
+    // Trigger edge computing to send notification alert
+    triggerEdgeComputingForAlert(user, "Anomaly detected in wearable data");
+  }
+}
+
+// ZKP verification function
+func verifyProof(wearableData: uint256[]): bool {
+  return true;
+}
+
+// Function to trigger edge computing for notification alert
+func triggerEdgeComputingForAlert(user: address, message: string) {
+  console("Notification alert for user: ", user, " - Message: ", message);
+}
+
+// Function to check if wearable data is anomalous
+func isAnomalous(data: uint256[], baseline: WearableData): bool {
+  require_eq(data.length, baseline.values.length, "Lengths of data and baseline values must match.");
+  require_eq(data.length, baseline.tolerances.length, "Lengths of data and baseline tolerances must match.");
+
+  for (var i: uint256 = 0; i < data.length; i++) {
+    if (data[i] < baseline.values[i] - baseline.tolerances[i] || data[i] > baseline.values[i] + baseline.tolerances[i]) {
+      return true;
+    }
   }
 
-  // Send transaction to trigger device action (e.g., adjust thermostat)
-  // based on sensor data and preferences
-  sendTransaction(...)
+  return false;
 }
 
-// Example ZKP verification function (placeholder)
-func verifyProof(sensorData: uint256): bool {
-  return true;
+// Function to set ZKP proof for wearable data
+func setProofForWearableData(user: address, proofValid: bool) {
+  assert(msg.sender == user, "Only the user can set the proof.");
+  userBaselines[user].wearableData.proofValid = proofValid;
 }
