@@ -1,4 +1,6 @@
 # StarkByte
+Exploration of IOT, edge computing, Starknet and Cairo
+
 This repository is a customized contract development environment for Starknet. Most commands are automated and written in .zsh scripts, but this does not change the fact that you can still use the console and standard `starknet` commands.
 
 # Setup
