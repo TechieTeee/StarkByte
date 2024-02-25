@@ -49,7 +49,7 @@ Run `npm run test`
 # Custom Typescript
 Run, for example, `npx ts-node scripts/index.ts`. I allow to get chainId from blockchain.
 
-# First Successful Deployment
+# First Successful Deployment (Remote Devnet)
 ![image](https://github.com/TechieTeee/StarkByte/assets/100870737/527cb095-b980-4838-8700-d0e6d5346b62)
 
 ![image](https://github.com/TechieTeee/StarkByte/assets/100870737/47cb9f32-4e6a-4a24-a210-7385c7d38305)
