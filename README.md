@@ -43,8 +43,14 @@ Run `./commands/contract_deploy.zsh` to declare contract class in network. Chang
 # Tests
 Implemented a basic example of contract testing
 
+
 Run `npm run test`
 
 # Custom Typescript
 Run, for example, `npx ts-node scripts/index.ts`. I allow to get chainId from blockchain.
+
+# First Successful Deployment
+![image](https://github.com/TechieTeee/StarkByte/assets/100870737/527cb095-b980-4838-8700-d0e6d5346b62)
+
+
 
