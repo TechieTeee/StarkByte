@@ -10,8 +10,8 @@ const HomePage: FC<IHomePage> = () => {
 	return (
 		<>
 			<Meta
-				title='Starknet x NextJs x Jotai'
-				description='StarkNext is a boilerplate to help you build your next dapp on Starknet using NextJs and Jotai'
+				title='Starknet x NextJs x Edge Computing'
+				description='IOT + Edge Computing on Chain'
 			/>
 
 			<div>

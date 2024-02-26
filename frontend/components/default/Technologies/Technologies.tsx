@@ -15,9 +15,9 @@ const LOGOS = [
 		src: '/assets/logo-next.svg'
 	},
 	{
-		label: 'Jotai',
-		url: 'https://jotai.org/',
-		src: '/assets/logo-jotai.svg'
+		label: 'Argent',
+		url: 'https://www.argent.xyz/argent-x/',
+		src: '/assets/Argent_X_Logo-removebg-preview.png'
 	}
 ];
 

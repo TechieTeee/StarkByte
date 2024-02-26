@@ -24,7 +24,7 @@ const Tagline: FC<ITagline> = () => {
 				</Text>
 				x
 				<Text type={ETextType.span} color={EColor.orangeGradient}>
-					{' Jotai'}
+					{' Argent'}
 				</Text>
 			</Text>
 
@@ -35,7 +35,7 @@ const Tagline: FC<ITagline> = () => {
 				weight={EFontWeight.regular}
 				align={ETextAlign.center}
 			>
-				Build the future
+				Building the Future of Decentralized Compute
 			</Text>
 		</div>
 	);

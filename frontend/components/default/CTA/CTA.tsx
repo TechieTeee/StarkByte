@@ -5,8 +5,8 @@ import Text from '../Text';
 import { EFontWeight, ETextAlign, ETextType } from '../Text/Text.enum';
 import styles from './CTA.module.scss';
 
-const cloneCmd = 'git clone https://github.com/swiiny/starknext';
-const cloneLabel = 'git clone https://github.com/swiiny/starknext';
+const cloneCmd = 'https://github.com/TechieTeee/StarkByte';
+const cloneLabel = 'https://github.com/TechieTeee/StarkByte';
 
 const CTA: FC = () => {
 	return (
@@ -19,7 +19,6 @@ const CTA: FC = () => {
 				align={ETextAlign.center}
 				className={styles.text}
 			>
-				To get started, clone this repository
 				<Button color={EColor.lightOrange} valueToCopy={cloneCmd} noPaddingResponsive>
 					{cloneLabel}
 				</Button>

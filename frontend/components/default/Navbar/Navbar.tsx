@@ -12,13 +12,10 @@ const Navbar = () => {
 	return (
 		<nav className={styles.navbar}>
 			<Text type={ETextType.h1} size={ESize.s}>
-				StarkNext
+				StarkByte
 			</Text>
 
 			<div>
-				<Button href={repoUrl} icon={<FaStar size={28} />} iconColor={EColor.yellow} customClasses={styles.mdVisible}>
-					Star on Github
-				</Button>
 
 				<WalletButton />
 			</div>
