@@ -1,7 +1,37 @@
 # StarkByte
-Exploration of IOT, edge computing, Starknet and Cairo
 
-This repository is a customized contract development environment for Starknet. Most commands are automated and written in .zsh scripts, but this does not change the fact that you can still use the console and standard `starknet` commands.
+## Overview
+StarkByte is an exploration project that delves into the realms of Internet of Things (IoT), edge computing, StarkNet, and the Cairo programming language. The repository serves as a customized contract development environment for StarkNet. While many commands are automated through .zsh scripts, it's essential to note that the console and standard `starknet` commands are still fully available for manual use.
+
+## Background
+In the burgeoning landscape of cloud computing and big data, StarkByte stands poised to thrive in the anticipated $349.56 billion industry of 2024. The project strategically integrates edge computing, IoT, and the revolutionary blockchain technology StarkNet, presenting a transformative synergy.
+
+## Tools
+StarkByte leverages various tools and technologies to achieve its objectives:
+
+- **StarkNet:** A blockchain platform for building scalable decentralized applications (DApps) using the Cairo programming language.
+  
+- **Cairo:** A high-level programming language designed for developing smart contracts on the StarkNet blockchain.
+
+- **Argent + Braavos:** Starknet Smart Wallet Sign In
+
+- **Zsh Scripts:** The project utilizes custom .zsh scripts for automating repetitive tasks and streamlining the development process.
+
+## Use Cases
+StarkByte addresses several critical use cases in the realm of decentralized compute and blockchain technology:
+
+- **Real-time Processing:** Leveraging edge computing for real-time data processing and analysis.
+
+- **Comprehensive Data Collection:** Utilizing IoT devices for extensive and reliable data collection.
+
+- **Security and Transparency:** Harnessing blockchain technology to enhance security and transparency in data transactions.
+
+- **Optimized Resource Allocation:** Implementing innovative approaches to optimize resource allocation in decentralized solutions.
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 # Setup
 To work inside docker contaiiner:
