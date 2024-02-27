@@ -34,53 +34,59 @@ const CTA: FC = () => {
         className={styles.text}
       >
         <p>
-          {`Why IoT, Blockchain, and Edge Computing are a powerful combo:`}
-          {` Add your description here...`}
+          {`Background`}
         </p>
-        <p>{/* Add space between the description and the inputs */}</p>
-        <form>
-          <label htmlFor="userId">User ID:</label>
-          <input
-            type="text"
-            id="userId"
-            name="userId"
-            value={sensorData.userId}
-            onChange={(e) => handleInputChange('userId', e.target.value)}
-          />
+        <p>
+          {`In the burgeoning landscape of cloud computing and big data, StarkByte, poised to thrive in the anticipated $349.56 billion industry of 2024, strategically integrates edge computing, IoT, and the revolutionary blockchain technology StarkNet. This fusion presents a transformative synergy, offering unparalleled advantages such as real-time processing through edge computing, comprehensive data collection via IoT, and heightened security and transparency facilitated by blockchain. StarkByte's innovative approach not only optimizes resource allocation, minimizes latency, and ensures data integrity but also establishes a foundation for scalable, decentralized solutions, making it a formidable player in shaping the future of cloud-based technologies.`}
+        </p>
 
-          <label htmlFor="baseline">Baseline:</label>
-          <input
-            type="text"
-            id="baseline"
-            name="baseline"
-            value={sensorData.baseline}
-            onChange={(e) => handleInputChange('baseline', e.target.value)}
-          />
+        {/* Add more space between the description and the inputs */}
+        <div className={styles.formContainer}>
+          <form>
+            <label htmlFor="userId">User ID:</label>
+            <input
+              type="text"
+              id="userId"
+              name="userId"
+              value={sensorData.userId}
+              onChange={(e) => handleInputChange('userId', e.target.value)}
+            />
 
-          <label htmlFor="tolerance">Tolerance:</label>
-          <input
-            type="text"
-            id="tolerance"
-            name="tolerance"
-            value={sensorData.tolerance}
-            onChange={(e) => handleInputChange('tolerance', e.target.value)}
-          />
+            <label htmlFor="baseline">Baseline:</label>
+            <input
+              type="text"
+              id="baseline"
+              name="baseline"
+              value={sensorData.baseline}
+              onChange={(e) => handleInputChange('baseline', e.target.value)}
+            />
 
-          <label htmlFor="readings">Readings:</label>
-          <input
-            type="text"
-            id="readings"
-            name="readings"
-            value={sensorData.readings}
-            onChange={(e) => handleInputChange('readings', e.target.value)}
-          />
+            <label htmlFor="tolerance">Tolerance:</label>
+            <input
+              type="text"
+              id="tolerance"
+              name="tolerance"
+              value={sensorData.tolerance}
+              onChange={(e) => handleInputChange('tolerance', e.target.value)}
+            />
 
-          <p>{/* Add space between the inputs and the button */}</p>
+            <label htmlFor="readings">Readings:</label>
+            <input
+              type="text"
+              id="readings"
+              name="readings"
+              value={sensorData.readings}
+              onChange={(e) => handleInputChange('readings', e.target.value)}
+            />
 
-          <Button color={EColor.lightOrange} valueToCopy={cloneCmd} noPaddingResponsive>
-            {cloneLabel}
-          </Button>
-        </form>
+            {/* Add space between the inputs and the button */}
+            <div className={styles.buttonContainer}>
+              <Button color={EColor.lightOrange} valueToCopy={cloneCmd} noPaddingResponsive>
+                {cloneLabel}
+              </Button>
+            </div>
+          </form>
+        </div>
       </Text>
     </div>
   );
