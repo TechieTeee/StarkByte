@@ -1,3 +1,4 @@
+![Starkbyte_Logo](https://github.com/TechieTeee/StarkByte/assets/100870737/d75d0e48-5860-4c99-930d-86e13bf33c9b)
 # StarkByte
 
 ## Overview
