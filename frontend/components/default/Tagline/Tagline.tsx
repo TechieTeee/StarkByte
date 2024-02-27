@@ -34,6 +34,7 @@ const Tagline: FC<ITagline> = () => {
 				color={EColor.gray}
 				weight={EFontWeight.regular}
 				align={ETextAlign.center}
+				style={{ marginBottom: '85px' }}
 			>
 				Building the Future of Decentralized Compute
 			</Text>

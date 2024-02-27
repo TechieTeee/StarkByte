@@ -1,25 +1,99 @@
 @import '../../../theme/mixins.scss';
 
 .text {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-	& > button {
-		margin-top: 32px;
-	}
+  & > button {
+    margin-top: 32px;
+  }
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-	transform: scale(0.9);
+  transform: scale(0.9);
 
-	@include sm() {
-		transform: scale(1);
-	}
+  @include sm() {
+    transform: scale(1);
+  }
+
+  .heroImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    label {
+      color: $white;
+      margin-bottom: 8px;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 16px;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .buttonContainer {
+      margin-top: 16px;
+    }
+  }
+
+  .spaceBetween {
+    margin-bottom: 20px;
+  }
+
+  .featuresSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    h2 {
+      color: $orangeGradient;
+      font-size: 3rem; /* Updated font-size to match "Try It Out" */
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .featuresList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+
+      li {
+        color: $white;
+        margin-bottom: 8px;
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+    }
+  }
 }
